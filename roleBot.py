@@ -87,6 +87,15 @@ async def on_message(message):
             await botChat.send ('Пользователю ' + message.author.mention + ' добавлена роль ' + rabotyagi.mention)
             return
 
+        
+        elif message.content  == '.удалить роль Работяги':
+            if message.author.roles.count(rabotyagi) == 0:
+                await botChat.send('У вас нет такой роли')
+                return
+            elif message.author.roles.count(rabotyagi) == 1:
+                await message.author.remove_roles(rabotyagi)
+                await botChat.send ('У пользователя ' + message.author.mention + ' была удалена роль ' + rabotyagi.mention)
+
 
         elif message.content == '.роль АФКашник':
             if message.author.roles.count(afkshnik) == 1:
@@ -97,6 +106,15 @@ async def on_message(message):
             return
         
 
+        elif message.content  == '.удалить роль АФКашник':
+            if message.author.roles.count(afkshnik) == 0:
+                await botChat.send('У вас нет такой роли')
+                return
+            elif message.author.roles.count(afkshnik) == 1:
+                await message.author.remove_roles(afkshnik)
+                await botChat.send ('У пользователя ' + message.author.mention + ' была удалена роль ' + afkshnik.mention)
+
+
         elif message.content == '.роль Знатоки':
             if message.author.roles.count(znatoki) == 1:
                 await botChat.send ('У вас уже есть эта роль')
@@ -104,6 +122,15 @@ async def on_message(message):
             await message.author.add_roles(znatoki)
             await botChat.send ('Пользователю ' + message.author.mention + ' добавлена роль ' + znatoki.mention)
             return
+
+        
+        elif message.content  == '.удалить роль Знатоки':
+            if message.author.roles.count(znatoki) == 0:
+                await botChat.send('У вас нет такой роли')
+                return
+            elif message.author.roles.count(znatoki) == 1:
+                await message.author.remove_roles(znatoki)
+                await botChat.send ('У пользователя ' + message.author.mention + ' была удалена роль ' + znatoki.mention)
 
         
         elif message.content == '.роль Анимечъник':
@@ -118,6 +145,15 @@ async def on_message(message):
             return
         
 
+        elif message.content  == '.удалить роль Анимечъник':
+            if message.author.roles.count(anime) == 0:
+                await botChat.send('У вас нет такой роли')
+                return
+            elif message.author.roles.count(anime) == 1:
+                await message.author.remove_roles(anime)
+                await botChat.send ('У пользователя ' + message.author.mention + ' была удалена роль ' + anime.mention)
+        
+
         elif message.content == '.роль АнимуХейтер':
             if message.author.roles.count(animeHate) == 1:
                 await botChat.send ('У вас уже есть эта роль')
@@ -130,6 +166,15 @@ async def on_message(message):
             return
         
 
+        elif message.content  == '.удалить роль АнимуХейтер':
+            if message.author.roles.count(animeHate) == 0:
+                await botChat.send('У вас нет такой роли')
+                return
+            elif message.author.roles.count(animeHate) == 1:
+                await message.author.remove_roles(animeHate)
+                await botChat.send ('У пользователя ' + message.author.mention + ' была удалена роль ' + animeHate.mention)
+        
+
         elif message.content == '.роль Под Владиславом':
             if message.author.roles.count(podVlad) == 1:
                 await botChat.send ('У вас уже есть эта роль')
@@ -137,6 +182,15 @@ async def on_message(message):
             await message.author.add_roles(podVlad)
             await botChat.send ('Пользователю ' + message.author.mention + ' добавлена роль ' + podVlad.mention)
             return
-    
+
+
+        elif message.content  == '.удалить роль Под Владиславом':
+            if message.author.roles.count(podVlad) == 0:
+                await botChat.send('У вас нет такой роли')
+                return
+            elif message.author.roles.count(podVlad) == 1:
+                await message.author.remove_roles(podVlad)
+                await botChat.send ('У пользователя ' + message.author.mention + ' была удалена роль ' + podVlad.mention)        
+
 
 client.run(botToken.DICORD_BOT_TOKEN)
