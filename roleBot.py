@@ -33,19 +33,14 @@ async def on_ready():
 
 
     """ Set server """
-    for guild in client.guilds:
-        if guild.id == 392581230891106306:
-            pupki = guild
+    pupki = client.get_guild(392581230891106306)
     print('Server: ' + pupki.name)
     print(pupki.id)
     print('-----------')
 
 
     """ Set general channel """
-    for guild in client.guilds:
-        for chat in guild.channels:
-            if chat.id == 587554944681246730:
-                botChat = chat
+    botChat = client.get_channel(587554944681246730)
     
     rabotyagi = pupki.get_role(529395728330653698)
     afkshnik = pupki.get_role(526152344799412234)
