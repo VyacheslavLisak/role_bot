@@ -169,4 +169,4 @@ async def on_message(message):
                 await botChat.send ('У пользователя ' + message.author.mention + ' была удалена роль ' + podVlad.mention)        
 
 
-client.run(botToken.DICORD_BOT_TOKEN)
+client.run(botToken.DISCORD_BOT_TOKEN)
