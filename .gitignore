@@ -1,3 +1,9 @@
-
+# Ignore python cache
 *.pyc
+__pycache__/
+
+# Ignore log files
+*.log
+
+# Ignore bot's token
 botToken.py
