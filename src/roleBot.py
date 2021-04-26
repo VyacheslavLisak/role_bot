@@ -58,7 +58,7 @@ async def on_ready():
     # Set channels
     rulesChannel = client.get_channel(834935955919208459)
     ownersChannel = client.get_channel(834936205119717397)
-    botCommandsChannel = client.get_channel(587554944681246730)
+    botCommandsChannel = client.get_channel(836351762398052382)
 
     # Set roles
     baseRole = pupki.get_role(612009586282463301)
