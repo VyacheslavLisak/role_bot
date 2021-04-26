@@ -7,3 +7,4 @@ __pycache__/
 
 # Ignore bot's token
 botToken.py
+src/botToken.py
